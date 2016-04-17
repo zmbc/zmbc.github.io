@@ -17,44 +17,48 @@
   <![endif]-->
 
   <script src="js/snap.svg.js" charset="utf-8"></script>
+  <script src="js/bezier-easing.js" charset="utf-8"></script>
 </head>
 
 <body>
   <div id="sky"></div>
+  <svg id="sun" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+    <circle cx="100" cy="50" r="10" fill="#fece02"></circle>
+  </svg>
   <svg id="stars" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice"></svg>
   <svg id="dipper" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
-    <polyline stroke="#b2aca5" fill="none" style="opacity: 0.5; stroke-dasharray: 1, 1; stroke-width: 0.7;" points="73,30,88,35,93,43,100,52,98,62,113,70,121,61">
+    <polyline stroke="#b2aca5" stroke-dasharray="80" stroke-dashoffset="80" stroke-width="0.7" fill="none" opacity="0.5" points="73,30,88,35,93,43,100,52,98,62,113,70,121,61">
     </polyline>
     <a xlink:href="http://www.github.com/zmbc" target="_blank">
-      <circle fill="#fdfdfd" data-tooltip="GitHub" r="1.4" cy="30" cx="73">
+      <circle opacity="0" fill="#fdfdfd" data-tooltip="GitHub" r="1.4" cy="30" cx="73">
       </circle>
     </a>
     <a xlink:href="#">
-      <circle fill="#fdfdfd" data-tooltip="LinkedIn" r="1.4" cy="35" cx="88">
+      <circle opacity="0" fill="#fdfdfd" data-tooltip="LinkedIn" r="1.4" cy="35" cx="88">
       </circle>
     </a>
     <a xlink:href="mailto:zmbc@uw.edu" target="_blank">
-      <circle fill="#fdfdfd" data-tooltip="Email" r="1.4" cy="43" cx="93">
+      <circle opacity="0" fill="#fdfdfd" data-tooltip="Email" r="1.4" cy="43" cx="93">
       </circle>
     </a>
     <a xlink:href="#projects">
-      <circle fill="#fdfdfd" data-tooltip="Projects" r="1.4" cy="52" cx="100">
+      <circle opacity="0" fill="#fdfdfd" data-tooltip="Projects" r="1.4" cy="52" cx="100">
       </circle>
     </a>
     <a xlink:href="#">
-      <circle fill="#fdfdfd" data-tooltip="Blah" r="1.4" cy="62" cx="98">
+      <circle opacity="0" fill="#fdfdfd" data-tooltip="Blah" r="1.4" cy="62" cx="98">
       </circle>
     </a>
-    <a xlink:href="#">
-      <circle fill="#fdfdfd" data-tooltip="Blah" r="1.4" cy="70" cx="113">
+    <a xlink:href="#credits">
+      <circle opacity="0" fill="#fdfdfd" data-tooltip="Credits" r="1.4" cy="70" cx="113">
       </circle>
     </a>
     <a xlink:href="http://www.github.com/zmbc/zmbc.github.io" target="_blank">
-      <circle fill="#fdfdfd" data-tooltip="Source Code" r="1.4" cy="61" cx="121">
+      <circle opacity="0" fill="#fdfdfd" data-tooltip="Source Code" r="1.4" cy="61" cx="121">
       </circle>
     </a>
   </svg>
-  <h1 id="title">Zeb Burke-Conte</h1>
+  <h1 id="title" style="opacity:0">Zeb Burke-Conte</h1>
   <p id="tooltip" style='display:none'>Hello!</p>
   <script src="js/main.js" charset="utf-8"></script>
 </body>
