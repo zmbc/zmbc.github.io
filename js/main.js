@@ -1,3 +1,34 @@
+// === NAVIGATION ===
+
+var openPage = function(pageName) {
+  document.getElementById('pages-container').style.display = 'block';
+  document.getElementById(pageName).style.display = 'block';
+};
+
+var closePage = function() {
+  var pagesContainer = document.getElementById('pages-container');
+  for (var i = 0; i < pagesContainer.children.length; i++) {
+    pagesContainer.children[i].style.display = 'none';
+  }
+  pagesContainer.style.display = 'none';
+};
+
+window.onhashchange = function() {
+  if (window.location.hash.length > 1) {
+    openPage(window.location.hash.substring(1));
+  } else {
+    closePage();
+  }
+};
+
+if (window.location.hash.length > 1) {
+  setTimeout(function() {
+    openPage(window.location.hash.substring(1));
+  }, 13500);
+}
+
+// === SVG ===
+
 var sun = Snap("#sun");
 
 // Animate sunset
