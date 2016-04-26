@@ -40,7 +40,8 @@ if (window.location.hash.length > 1) {
 // === AUDIO ===
 
 new Howl({
-  urls: ['audio/bird_whistling.ogg', 'audio/bird_whistling.mp3']
+  urls: ['audio/bird_whistling.ogg', 'audio/bird_whistling.mp3'],
+  loop: false
 }).play();
 
 setTimeout(function() {
