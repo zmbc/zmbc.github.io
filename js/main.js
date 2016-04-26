@@ -39,6 +39,8 @@ if (window.location.hash.length > 1) {
 
 // === AUDIO ===
 
+Howler.iOSAutoEnable = false;
+
 new Howl({
   urls: ['audio/bird_whistling.ogg', 'audio/bird_whistling.mp3'],
   loop: false
