@@ -26,18 +26,20 @@ html, body, #sky, #stars, #dipper, #sun {
 #sky {
   background: linear-gradient(#088ABA, #031634);
   background-size: 100% 500%;
-  -webkit-animation: sunset 7s normal forwards cubic-bezier(.98,.0,.43,.9);
-  animation: sunset 7s normal forwards cubic-bezier(.98,.0,.43,.9);
+  -webkit-animation: sunset 7s normal forwards cubic-bezier(.98,.0,.44,1);
+  animation: sunset 7s normal forwards cubic-bezier(.98,.0,.44,1);
 }
 
 #title {
   font-family: 'Philosopher', sans-serif;
-  font-size: 50px;
+  font-size: 7.5vh;
   font-weight: bold;
   width: 100%;
   text-align: center;
   position: absolute;
   color: #FDFDFD;
+  margin-top: 5vh;
+  line-height: 10vh;
 }
 
 #tooltip {
@@ -77,4 +79,22 @@ html, body, #sky, #stars, #dipper, #sun {
   margin-bottom: 30px;
 
   padding: 30px;
+}
+
+#pages-container .page a {
+  color: #031634;
+}
+
+#pages-container .page h1,
+#pages-container .page h2 {
+  font-family: 'Philosopher', sans-serif;
+}
+
+#pages-container .page .project {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+
+#pages-container .page .project.last-project {
+  border-bottom: 1px solid #ccc;
 }

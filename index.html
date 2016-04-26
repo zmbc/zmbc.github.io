@@ -18,6 +18,7 @@
 
   <script src="js/snap.svg.js" charset="utf-8"></script>
   <script src="js/bezier-easing.js" charset="utf-8"></script>
+  <script src="js/howler.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -29,24 +30,24 @@
   <svg id="dipper" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
     <polyline stroke="#b2aca5" stroke-dasharray="80" stroke-dashoffset="80" stroke-width="0.7" fill="none" opacity="0.5" points="73,30,88,35,93,43,100,52,98,62,113,70,121,61">
     </polyline>
-    <a xlink:href="http://www.github.com/zmbc" target="_blank">
-      <circle opacity="0" fill="#fdfdfd" data-tooltip="GitHub" r="1.4" cy="30" cx="73">
+    <a xlink:href="#about-me">
+      <circle opacity="0" fill="#fdfdfd" data-tooltip="About Me" r="1.4" cy="30" cx="73">
       </circle>
     </a>
-    <a xlink:href="#">
-      <circle opacity="0" fill="#fdfdfd" data-tooltip="LinkedIn" r="1.4" cy="35" cx="88">
+    <a xlink:href="#projects">
+      <circle opacity="0" fill="#fdfdfd" data-tooltip="Projects" r="1.4" cy="35" cx="88">
       </circle>
     </a>
     <a xlink:href="mailto:zmbc@uw.edu" target="_blank">
       <circle opacity="0" fill="#fdfdfd" data-tooltip="Email" r="1.4" cy="43" cx="93">
       </circle>
     </a>
-    <a xlink:href="#projects">
-      <circle opacity="0" fill="#fdfdfd" data-tooltip="Projects" r="1.4" cy="52" cx="100">
+    <a xlink:href="http://www.github.com/zmbc" target="_blank">
+      <circle opacity="0" fill="#fdfdfd" data-tooltip="GitHub" r="1.4" cy="52" cx="100">
       </circle>
     </a>
     <a xlink:href="#">
-      <circle opacity="0" fill="#fdfdfd" data-tooltip="Blah" r="1.4" cy="62" cx="98">
+      <circle opacity="0" fill="#fdfdfd" data-tooltip="LinkedIn" r="1.4" cy="62" cx="98">
       </circle>
     </a>
     <a xlink:href="#credits">
@@ -61,14 +62,37 @@
   <h1 id="title" style="opacity:0">Zeb Burke-Conte</h1>
   <p id="tooltip" style='display:none'>Hello!</p>
   <div id="pages-container" style='display:none'>
+    <div id="about-me" class="page" style='display:none'>
+      <a href="#" style="position:absolute;right:30px">Close</a>
+      <h1>About Me</h1>
+      <p>Hi, I'm Zeb. I live in Seattle, Washington. I go to school, make websites, and mess around with data. I've used technologies like Ruby, Rails, Javascript, Ionic, Python, C# and Java (from most to least familiar), but I try to focus on concepts over implementation details. I'm excited to learn more about data visualization, design, statistics, and computer science theory. Outside of technology, I'm a basketball fan and political science fascinates me.</p>
+    </div>
+    <div id="projects" class="page" style='display:none'>
+      <a href="#" style="position:absolute;right:30px">Close</a>
+      <h1>Projects</h1>
+      <div class="project">
+        <h2><a href="http://zmbc.github.io/soql" target="_blank">soql</a></h2>
+        <p>An R package that makes it easier to construct queries for the Socrata Open Data API.</p>
+      </div>
+      <div class="project">
+        <h2><a href="https://www.github.com/zmbc/shakespeare" target="_blank">shakespeare</a></h2>
+        <p>An interpreter for the Shakespeare Programming Language, an esoteric language whose source code looks like Shakespeare plays.</p>
+      </div>
+      <div class="project last-project">
+        <h2>Personal website</h2>
+        <p>This site you're on right now!</p>
+      </div>
+    </div>
     <div id="credits" class="page" style='display:none'>
       <a href="#" style="position:absolute;right:30px">Close</a>
       <h1>Credits</h1>
       <ul>
-        <li>Snap.svg for most of the SVG</li>
+        <li><a href="http://snapsvg.io/">Snap.svg</a> for most of the SVG creation and manipulation</li>
         <li><a href="https://github.com/gre/bezier-easing">bezier-easing</a> for animation timing</li>
-        <li>Blah</li>
-        <li>Lorem</li>
+        <li><a href="http://goldfirestudios.com/blog/104/howler.js-Modern-Web-Audio-Javascript-Library">howler.js</a> for browser audio</li>
+        <li><a href="https://www.freesound.org/people/InspectorJ/sounds/339326/">Bird Whistling, A.wav</a> by InspectorJ on <a href="https://www.freesound.org/">freesound.org</a></li>
+        <li><a href="https://www.freesound.org/people/dheming/sounds/194498/">Windy_Night_02B.wav</a> by dheming on <a href="https://www.freesound.org/">freesound.org</a></li>
+        <li><a href="https://www.freesound.org/people/sazman/sounds/322200/">cricket</a> by sazman on <a href="https://www.freesound.org/">freesound.org</a></li>
       </ul>
     </div>
   </div>

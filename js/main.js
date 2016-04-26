@@ -2,15 +2,25 @@
 
 var openPage = function(pageName) {
   document.getElementById('pages-container').style.display = 'block';
-  document.getElementById(pageName).style.display = 'block';
+  var thisPage = document.getElementById(pageName);
+  thisPage.style.opacity = 0;
+  thisPage.style.display = 'block';
+  Snap("#" + pageName).animate({opacity: 1}, 300);
 };
 
 var closePage = function() {
   var pagesContainer = document.getElementById('pages-container');
   for (var i = 0; i < pagesContainer.children.length; i++) {
-    pagesContainer.children[i].style.display = 'none';
+    if (pagesContainer.children[i].style.display === 'block') {
+      var openPage = pagesContainer.children[i];
+      Snap("#" + openPage.id).animate({opacity: 0}, 300);
+      setTimeout(function() {
+        openPage.style.display = 'none';
+        pagesContainer.style.display = 'none';
+      }, 300);
+    }
   }
-  pagesContainer.style.display = 'none';
+
 };
 
 window.onhashchange = function() {
@@ -26,6 +36,32 @@ if (window.location.hash.length > 1) {
     openPage(window.location.hash.substring(1));
   }, 13500);
 }
+
+// === AUDIO ===
+
+new Howl({
+  urls: ['audio/bird_whistling.ogg', 'audio/bird_whistling.mp3']
+}).play();
+
+setTimeout(function() {
+  new Howl({
+    urls: ['audio/ambience.ogg', 'audio/bird_whistling.mp3'],
+    loop: true,
+    volume: 0.0
+  })
+  .play()
+  .fade(0.0, 1.0, 1500);
+}, 4200);
+
+setTimeout(function() {
+  new Howl({
+    urls: ['audio/cricket.ogg', 'audio/bird_whistling.mp3'],
+    loop: true,
+    volume: 0.0
+  })
+  .play()
+  .fade(0.0, 1.0, 4500);
+}, 5500);
 
 // === SVG ===
 
