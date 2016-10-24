@@ -1,3 +1,35 @@
+// onhashchange polyfill
+
+(function(window) {
+
+  // exit if the browser implements that event
+  if ( "onhashchange" in window.document.body ) { return; }
+
+  var location = window.location,
+    oldURL = location.href,
+    oldHash = location.hash;
+
+  // check the location hash on a 100ms interval
+  setInterval(function() {
+    var newURL = location.href,
+      newHash = location.hash;
+
+    // if the hash has changed and a handler has been bound...
+    if ( newHash != oldHash && typeof window.onhashchange === "function" ) {
+      // execute the handler
+      window.onhashchange({
+        type: "hashchange",
+        oldURL: oldURL,
+        newURL: newURL
+      });
+
+      oldURL = newURL;
+      oldHash = newHash;
+    }
+  }, 100);
+
+})(window);
+
 // === NAVIGATION ===
 
 var openPage = function(pageName) {
@@ -139,11 +171,11 @@ setTimeout(function() {
       el.animate({opacity: 1}, 500);
     }, 500 + (200 * idx));
 
-    el.node.addEventListener('mouseenter', function() {
+    el.node.addEventListener('mouseover', function() {
       el.animate({r: '2'}, 25, mina.easein);
   	});
 
-  	el.node.addEventListener('mouseleave', function() {
+  	el.node.addEventListener('mouseout', function() {
       el.animate({r: '1.4'}, 25, mina.easein);
   	});
   });
