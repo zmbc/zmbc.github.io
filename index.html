@@ -27,37 +27,74 @@
     <circle cx="100" cy="50" r="10" fill="#fece02"></circle>
   </svg>
   <svg id="stars" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice"></svg>
-  <svg id="dipper" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+  <svg id="dipper" viewBox="65 5 65 80" preserveAspectRatio="xMidYMid meet">
     <polyline stroke="#b2aca5" stroke-dasharray="80" stroke-dashoffset="80" stroke-width="0.7" fill="none" opacity="0.5" points="73,30,88,35,93,43,100,52,98,62,113,70,121,61">
     </polyline>
-    <a xlink:href="#about-me">
-      <circle opacity="0" fill="#fdfdfd" data-tooltip="About Me" r="1.4" cy="30" cx="73">
-      </circle>
-    </a>
-    <a xlink:href="#projects">
-      <circle opacity="0" fill="#fdfdfd" data-tooltip="Projects" r="1.4" cy="35" cx="88">
-      </circle>
-    </a>
-    <a xlink:href="mailto:zmbc@uw.edu" target="_blank">
-      <circle opacity="0" fill="#fdfdfd" data-tooltip="Email" r="1.4" cy="43" cx="93">
-      </circle>
-    </a>
-    <a xlink:href="http://www.github.com/zmbc" target="_blank">
-      <circle opacity="0" fill="#fdfdfd" data-tooltip="GitHub" r="1.4" cy="52" cx="100">
-      </circle>
-    </a>
-    <a xlink:href="#">
-      <circle opacity="0" fill="#fdfdfd" data-tooltip="LinkedIn" r="1.4" cy="62" cx="98">
-      </circle>
-    </a>
-    <a xlink:href="#credits">
-      <circle opacity="0" fill="#fdfdfd" data-tooltip="Credits" r="1.4" cy="70" cx="113">
-      </circle>
-    </a>
-    <a xlink:href="http://www.github.com/zmbc/zmbc.github.io" target="_blank">
-      <circle opacity="0" fill="#fdfdfd" data-tooltip="Source Code" r="1.4" cy="61" cx="121">
-      </circle>
-    </a>
+    <g transform="translate(73, 30)">
+      <g width="20" height="4.5" transform="translate(-10, -7)" opacity="0">
+        <rect width="13" x="3.5" height="4.5" stroke-width="3px" fill="#333333" rx="1" ry="1"/>
+        <text width="20" height="4.5" x="10" y="2.4" alignment-baseline="middle" text-anchor="middle" font-size="2.5" font-family="Muli" fill="whitesmoke">About Me</text>
+      </g>
+      <a xlink:href="#about-me">
+        <circle opacity="0" fill="#fdfdfd" r="1.4"></circle>
+      </a>
+    </g>
+    <g transform="translate(88, 35)">
+      <g width="20" height="4.5" transform="translate(-10, -7)" opacity="0">
+        <rect width="11" x="4.5" height="4.5" stroke-width="3px" fill="#333333" rx="1" ry="1"/>
+        <text width="20" height="4.5" x="10" y="2.4" alignment-baseline="middle" text-anchor="middle" font-size="2.5" font-family="Muli" fill="whitesmoke">Projects</text>
+      </g>
+      <a xlink:href="#projects">
+        <circle opacity="0" fill="#fdfdfd" data-tooltip="Projects" r="1.4"></circle>
+      </a>
+    </g>
+    <g transform="translate(93, 43)">
+      <g width="20" height="4.5" transform="translate(-10, -7)" opacity="0">
+        <rect width="8" x="6" height="4.5" stroke-width="3px" fill="#333333" rx="1" ry="1"/>
+        <text width="20" height="4.5" x="10" y="2.4" alignment-baseline="middle" text-anchor="middle" font-size="2.5" font-family="Muli" fill="whitesmoke">Email</text>
+      </g>
+      <a xlink:href="mailto:zmbc@uw.edu" target="_blank">
+        <circle opacity="0" fill="#fdfdfd" data-tooltip="Email" r="1.4"></circle>
+      </a>
+    </g>
+    <g transform="translate(100, 52)">
+      <g width="20" height="4.5" transform="translate(-10, -7)" opacity="0">
+        <rect width="10" x="5" height="4.5" stroke-width="3px" fill="#333333" rx="1" ry="1"/>
+        <text width="20" height="4.5" x="10" y="2.4" alignment-baseline="middle" text-anchor="middle" font-size="2.5" font-family="Muli" fill="whitesmoke">GitHub</text>
+      </g>
+      <a xlink:href="http://www.github.com/zmbc" target="_blank">
+        <circle opacity="0" fill="#fdfdfd" data-tooltip="GitHub" r="1.4">
+        </circle>
+      </a>
+    </g>
+    <g transform="translate(98, 62)">
+      <g width="20" height="4.5" transform="translate(-10, -7)" opacity="0">
+        <rect width="11" x="4.5" height="4.5" stroke-width="3px" fill="#333333" rx="1" ry="1"/>
+        <text width="20" height="4.5" x="10" y="2.4" alignment-baseline="middle" text-anchor="middle" font-size="2.5" font-family="Muli" fill="whitesmoke">LinkedIn</text>
+      </g>
+      <a xlink:href="#">
+        <circle opacity="0" fill="#fdfdfd" data-tooltip="LinkedIn" r="1.4">
+        </circle>
+      </a>
+    </g>
+    <g transform="translate(113, 70)">
+      <g width="20" height="4.5" transform="translate(-10, -7)"  opacity="0">
+        <rect width="10" x="5" height="4.5" stroke-width="3px" fill="#333333" rx="1" ry="1"/>
+        <text width="20" height="4.5" x="10" y="2.4" alignment-baseline="middle" text-anchor="middle" font-size="2.5" font-family="Muli" fill="whitesmoke">Credits</text>
+      </g>
+      <a xlink:href="#credits">
+        <circle opacity="0" fill="#fdfdfd" data-tooltip="Credits" r="1.4"></circle>
+      </a>
+    </g>
+    <g transform="translate(121, 61)">
+      <g width="20" height="4.5" transform="translate(-10, -7)" opacity="0">
+        <rect width="16" x="2" height="4.5" stroke-width="3px" fill="#333333" rx="1" ry="1"/>
+        <text width="20" height="4.5" x="10" y="2.4" alignment-baseline="middle" text-anchor="middle" font-size="2.5" font-family="Muli" fill="whitesmoke">Source Code</text>
+      </g>
+      <a xlink:href="http://www.github.com/zmbc/zmbc.github.io" target="_blank">
+        <circle opacity="0" fill="#fdfdfd" data-tooltip="Source Code" r="1.4"></circle>
+      </a>
+    </g>
   </svg>
   <h1 id="title" style="opacity:0">Zeb Burke-Conte</h1>
   <p id="tooltip" style='display:none'>Hello!</p>

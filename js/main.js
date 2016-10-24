@@ -73,7 +73,7 @@ var sun = Snap("#sun");
 // Animate sunset
 sun.select('circle').animate({
   cy: 110
-}, 5300, bezier(.97,0,.83,.73));
+}, 5300, bezier(0.97, 0, 0.83, 0.73));
 
 var stars = Snap("#stars");
 
@@ -96,8 +96,7 @@ setTimeout(function() {
     }, 100);
   };
 
-  // Make the first ten at a rate of 1/100ms, and the next 390 at a rate of
-  // 1/5ms
+  // Make ten slow, 370 fast, twenty slow
   var i = 0;
   var intervalId = setInterval(function() {
     makeStar();
@@ -107,8 +106,15 @@ setTimeout(function() {
       intervalId = setInterval(function() {
         makeStar();
         i++;
-        if (i >= 400) {
+        if (i >= 380) {
           clearInterval(intervalId);
+          intervalId = setInterval(function() {
+            makeStar();
+            i++;
+            if (i >= 400) {
+              clearInterval(intervalId);
+            }
+          }, 100);
         }
       }, 5);
     }
@@ -120,7 +126,7 @@ setTimeout(function() {
   Snap("#title").animate({
     opacity: 1
   }, 2000);
-}, 9100);
+}, 9000);
 
 
 var dipper = Snap("#dipper");
@@ -135,17 +141,17 @@ setTimeout(function() {
 
     el.node.addEventListener('mouseenter', function() {
       el.animate({r: '2'}, 25, mina.easein);
-      tooltip.style.display = 'block';
-      tooltip.innerHTML = el.attr('data-tooltip');
-      var clientRect = el.node.getBoundingClientRect();
-      tooltip.style.left = (clientRect.left - (tooltip.getBoundingClientRect().width / 2) + 10).toString() + 'px';
-      tooltip.style.top = (clientRect.top - 40).toString() + 'px';
   	});
 
   	el.node.addEventListener('mouseleave', function() {
       el.animate({r: '1.4'}, 25, mina.easein);
-      tooltip.style.display = 'none';
   	});
+  });
+
+  dipper.selectAll('g g').forEach(function(el, idx) {
+    setTimeout(function() {
+      el.animate({opacity: 1}, 500);
+    }, 1500 + (300 * idx));
   });
 
   var makeShootingStar = function() {
