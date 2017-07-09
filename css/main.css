@@ -98,3 +98,7 @@ html, body, #sky, #stars, #dipper, #sun {
 #pages-container .page .project.last-project {
   border-bottom: 1px solid #ccc;
 }
+
+svg a {
+  outline: none;
+}

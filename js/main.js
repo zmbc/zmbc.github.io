@@ -166,11 +166,13 @@ var dipper = Snap("#dipper");
 setTimeout(function() {
   var tooltip = document.getElementById('tooltip');
 
-  dipper.selectAll('a circle').forEach(function(el, idx) {
+  dipper.selectAll('circle').forEach(function(el, idx) {
     setTimeout(function() {
       el.animate({opacity: 1}, 500);
     }, 500 + (200 * idx));
+  });
 
+  dipper.selectAll('a circle').forEach(function(el, idx) {
     el.node.addEventListener('mouseover', function() {
       el.animate({r: '2'}, 25, mina.easein);
   	});
